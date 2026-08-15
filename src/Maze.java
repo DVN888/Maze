@@ -124,20 +124,11 @@ public class Maze{
     }
 
     public static void main(String[] args) {
-        //Color col_dfs = new Color(50,100,200);
-        //Color col_bfs = new Color(200,100,50);
         Random rnd = new Random();
         final int sideLength = 40;
-        //Maze bleh = new Maze(sideLength,rnd.nextInt(sideLength*sideLength));
         Maze bleh = new Maze(sideLength,sideLength*(sideLength-1)+ (int) sideLength/2);
-        //List<Integer> path = bleh.findWay(0, sideLength*sideLength-1);
         List<Integer> path = bleh.findWay(0, sideLength*sideLength-1);
-        //BreadthFirstSearch bfs = new BreadthFirstSearch(bleh.M(),sideLength*sideLength-1);
-        //bfs.nonrecursiveBFS(bleh.M());
-        //List<Integer> pahh = bfs.pathTo(0);
-        //GridGraph vis = new GridGraph(bleh.M(),path,col_dfs);
-        //vis.plot(pahh,1,col_bfs);
-        GridGraph dih = new GridGraph(bleh.M(),path);
+        GridGraph grid = new GridGraph(bleh.M(),path);
     }
 
 
