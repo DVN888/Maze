@@ -22,13 +22,6 @@ public class Maze{
         buildMaze();
 	}
 	
-    public Maze (In in) {
-    	this.M = new Graph(in);
-    	this.N= (int) Math.sqrt(M.V());
-    	this.startnode=0;
-    }
-
-	
     /**
      * Adds the undirected edge v-w to the graph M.
      *
